@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "styles.css">
+    <title>Calc</title>
+</head>
+<body>
+    <div id = "calculator">
+        <div id = "display">0</div>
+        <div id = "buttons">
+            <div id = "top">
+                <button onclick = "cleario()">AC</button>
+                <button onclick = "changeSign()">+/-</button>
+                <button onclick = "switchOp(this)">%</button>
+                <button class = "op" onclick = "switchOp(this)">/</button>
+            </div>
+            <div id = "middle1">
+                <button onclick = "numBtnClicked(this)">7</button>
+                <button onclick = "numBtnClicked(this)">8</button>
+                <button onclick = "numBtnClicked(this)">9</button>
+                <button class = "op" onclick = "switchOp(this)">*</button>
+            </div>
+            <div id = "middle2">
+                <button onclick = "numBtnClicked(this)">4</button>
+                <button onclick = "numBtnClicked(this)">5</button>
+                <button onclick = "numBtnClicked(this)">6</button>
+                <button class = "op" onclick = "switchOp(this)">-</button>
+            </div>
+            <div id = "middle3">
+                <button onclick = "numBtnClicked(this)">1</button>
+                <button onclick = "numBtnClicked(this)">2</button>
+                <button onclick = "numBtnClicked(this)">3</button>
+                <button class = "op" onclick = "switchOp(this)">+</button>
+            </div>
+            <div id = "bottom">
+                <button id = "zero">0</button>
+                <button onclick = "dotClicked()">.</button>
+                <button class = "op" onclick = "equalsClicked()">=</button>
+            </div>
+        </div>
+    </div>
+    <script src = "script.js"></script>
+</body>
+</html>
