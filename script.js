@@ -87,8 +87,6 @@ function dotClicked(){
 function equalsClicked(){
     if(operator != "" && num1 != "" && num2 != ""){
         let answer = operation(num1, num2, operator)
-        console.log(answer);
-        console.log(answer.toString().length);
         if(answer.toString().length >= 9){
             if(answer > 1e100){
                 return nah();
@@ -115,15 +113,22 @@ function lengthCheck(leng){
 }
 function switchOp(op){
     if (op.textContent == operator && (num1 != "" && num2 != "")){
-        let answer = operation(num1, num2, operation);
+        let answer = operation(num1, num2, operator);
+        console.log(answer);
         if(answer.toString().length >= 9){
             if(answer > 1e100){
                 return nah();
             }
-            if (Math.abs(answer) > 1e10) {
+            if (Math.abs(answer) > 1e9) {
                 answer = answer.toExponential(2);
             }else{
-                answer.toFixed(6);
+                let num = 8
+                if(answer.toString().length == 9){
+                    num = 9
+                }
+                let rounded = Math.floor(answer);
+                let decimal = num - rounded.toString().length;
+                answer = answer.toFixed(decimal);
             }
             
         }
