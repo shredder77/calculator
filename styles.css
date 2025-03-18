@@ -6,6 +6,11 @@
     display: flex;
     align-items:center;
     justify-content: right;
+    padding-right:10px;
+    padding-left:10px;
+    box-sizing: border-box;
+    font-size:70px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 body{
     display:flex;

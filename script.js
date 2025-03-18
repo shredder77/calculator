@@ -96,7 +96,9 @@ function equalsClicked(){
             if (Math.abs(answer) > 1e10) {
                 answer = answer.toExponential(2);
             }else{
-                answer = answer.toFixed(6);
+                let rounded = Math.floor(answer);
+                let decimal = 8 - rounded.toString().length;
+                answer = answer.toFixed(decimal);
             }
             
         }
